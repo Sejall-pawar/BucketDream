@@ -9,7 +9,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const router = createBrowserRouter[(
+const router = createBrowserRouter([
   {
     path: '/',
     element: <Home/>,
@@ -21,8 +21,12 @@ const router = createBrowserRouter[(
   {
     path: '/show',
     element: <Show/>
+  },
+  {
+    path: '*',
+    element: <h1>404 Not Found</h1>
   }
-)]
+])
 
 root.render( <RouterProvider router={router}/>);
 
