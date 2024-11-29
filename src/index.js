@@ -4,6 +4,7 @@ import './index.css';
 import Home from "./views/Home/Home"
 import Add from "./views/Add/Add"
 import Show from "./views/Show/Show"
+import { Toaster } from 'react-hot-toast';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
@@ -28,5 +29,10 @@ const router = createBrowserRouter([
   }
 ])
 
-root.render( <RouterProvider router={router}/>);
+root.render( 
+  <div>
+<RouterProvider router={router}/>
+  <Toaster/>
+  </div>
+);
 
