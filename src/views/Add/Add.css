@@ -1,0 +1,192 @@
+.add {
+    text-align: center;
+    color: #008DDA;
+    margin-top: 40px;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.user-input {
+    width: 300px;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 20px;
+    display: block;
+    margin: 10px auto;
+}
+.user-input2 {
+    width: 340px;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 20px;
+    display: block;
+    margin: 10px auto;
+}
+
+.date {
+    position: relative;
+    width: 300px;
+    margin: 10px 39%;
+}
+
+.date-label {
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    font-size: 20px;
+    color: #555;
+    margin-top: 15px;
+    padding-bottom: 5px;
+}
+
+.date-input {
+    width: 100%;
+    height: 40px;
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+.add-btn{
+    height: 50px;
+    width: 150px;
+    background-color: #ff6699;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto;
+}
+
+@media screen and (max-width: 350px) {
+    .add {
+        font-size: 30px;
+        margin-top: 10px;
+    }
+
+    .user-input {
+        width: 230px;
+        padding: 8px 10px;
+        font-size: 14px;
+        margin: 5px auto;
+    }
+
+    .date {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin: 10px auto;
+    }
+
+    .date-label {
+        top: -8px;
+        left: 35px;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .date-input {
+        width: 230px;
+        height: 50px;
+        padding: 5px 10px;
+        font-size: 16px;
+    }
+
+    .user-input2 {
+        width: 255px;
+        padding: 10px 20px;
+        font-size: 20px;
+        margin: 10px auto;
+    }
+
+    .add-btn{
+        height: 40px;
+        width: 120px;
+        font-size: 15px;
+    }
+    
+}
+
+@media screen and (min-width: 350px) and (max-width: 668px) {
+    .add {
+        font-size: 40px;
+        margin-top: 20px;
+    }
+
+    .user-input {
+        width: 230px;
+        padding: 8px 10px;
+        font-size: 14px;
+        margin: 5px auto;
+    }
+
+    .date {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin: 10px auto;
+    }
+
+    .date-label {
+        top: -8px;
+        left: 35px;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .date-input {
+        width: 230px;
+        height: 50px;
+        padding: 5px 10px;
+        font-size: 16px;
+    }
+
+    .user-input2 {
+        width: 255px;
+        padding: 10px 20px;
+        font-size: 20px;
+        margin: 10px auto;
+    }
+
+    .add-btn{
+        height: 50px;
+        width: 140px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 669px) and (max-width: 992px) {
+    .add {
+        font-size: 45px;
+        margin-top: 30px;
+    }
+
+    .date {
+        position: relative;
+        width: 300px;
+        margin: 10px 28%;
+    }
+
+    .add-btn{
+        height: 50px;
+        width: 140px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .date {
+        position: relative;
+        width: 300px;
+        margin: 10px 35%;
+    }
+}
