@@ -11,27 +11,27 @@ function Add() {
   const [category, setCategory] = useState();
   const [emoji, setEmoji] = useState();
 
-const addWish = () => {
-  const wishes = JSON.parse(localStorage.getItem("wishes")) || [];
+  const addWish = () => {
+    const wishes = JSON.parse(localStorage.getItem("wishes")) || [];
 
-  const wishObject = {
-    title,
-    description,
-    targetDate,
-    category
+    const wishObject = {
+      title,
+      description,
+      targetDate,
+      category
+    };
+
+    wishes.push(wishObject);
+
+    localStorage.setItem("wishes", JSON.stringify(wishes));
+
+    toast.success("Wish added successfully!");
+
+    setTitle("");
+    setDescription("");
+    setTargetDate("");
+    setCategory("");
   };
-
-  wishes.push(wishObject);
-
-  localStorage.setItem("wishes", JSON.stringify(wishes));
-
-  toast.success("Wish added successfully!");
-
-  setTitle("");
-  setDescription("");
-  setTargetDate("");
-  setCategory("");
-};
 
   return (
     <div>
@@ -57,27 +57,33 @@ const addWish = () => {
       />
 
       <div className='date'>
-        <label htmlFor="targetDate" className='date-label'>When do you want to achieve this?</label>
+        <label
+          htmlFor="targetDate"
+          className={`date-label ${targetDate ? 'hidden' : ''}`}
+        >
+          When do you want to achieve this?
+        </label>
         <input
-          type='date'
+          type="date"
           id="targetDate"
           value={targetDate}
           onChange={(e) => setTargetDate(e.target.value)}
           className="user-input date-input"
         />
+
       </div>
 
       <select value={category} onChange={(e) => setCategory(e.target.value)} className='user-input2'>
-      <option value="">Select Category</option>
+        <option value="">Select Category</option>
         <option value="travel">Travel</option>
         <option value="adventure">Adventure</option>
         <option value="skills">Skills</option>
         <option value="personal growth">Personal Growth</option>
       </select>
 
-      <button type='button' 
-      className='add-btn'
-      onClick={addWish}>
+      <button type='button'
+        className='add-btn'
+        onClick={addWish}>
         + Add Wish
       </button>
 
